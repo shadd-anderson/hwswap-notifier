@@ -18,7 +18,7 @@ def check_new_posts(sub, limit=25, flair=None, timeframe=datetime.timedelta(minu
 
 
 def notify_keywords(twilio_number, recipient):
-    new_posts = check_new_posts('hardwareswap', flair='SELLING', timeframe=datetime.timedelta(hours=48))
+    new_posts = check_new_posts('hardwareswap', flair='SELLING')
     matches = {}
     for post in new_posts:
         for key in set(KEYWORDS.keys()):

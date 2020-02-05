@@ -17,7 +17,7 @@ def check_new_posts(sub, limit=25, flair=None, timeframe=datetime.timedelta(minu
                 if datetime.datetime.now() - datetime.datetime.fromtimestamp(post.created_utc) < timeframe}
 
 
-def notify_keywords(twilio_number, recipient):
+def notify_hardwareswap_keywords(twilio_number, recipient):
     new_posts = check_new_posts('hardwareswap', flair='SELLING')
     matches = {}
     for post in new_posts:
